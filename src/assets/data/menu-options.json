@@ -1,0 +1,127 @@
+    [
+        {
+            "name": "Action Sheet",
+            "icon": "podium-outline",
+            "route": "/home/action-sheet"
+        },
+        {
+            "name": "Alert",
+            "icon": "alert-outline",
+            "route": "/home/alert"
+        },
+        {
+            "name": "Avatar",
+            "icon": "accessibility-outline",
+            "route": "/home/avatar"
+        },
+        {
+            "name": "Button",
+            "icon": "radio-button-off-outline",
+            "route": "/home/button"
+        },
+        {
+            "name": "Card",
+            "icon": "card-outline",
+            "route": "/home/card"
+        },
+        {
+            "name": "Check Box",
+            "icon": "checkbox-outline",
+            "route": "/home/check-box"
+        },
+        {
+            "name": "Date Tine",
+            "icon": "calendar-outline",
+            "route": "/home/date-time"
+        },
+        {
+            "name": "Fab",
+            "icon": "bookmark-outline",
+            "route": "/home/fab"
+        },
+        {
+            "name": "Grid Row Col",
+            "icon": "grid-outline",
+            "route": "/home/grid-row-col"
+        },
+        {
+            "name": "Infinite Scroll",
+            "icon": "clipboard-outline",
+            "route": "/home/infinite-scroll"
+        },
+        {
+            "name": "Input",
+            "icon": "add-outline",
+            "route": "/home/input"
+        },
+        {
+            "name": "List",
+            "icon": "list-outline",
+            "route": "/home/list"
+        },
+        {
+            "name": "Item Sliding",
+            "icon": "pricetag-outline",
+            "route": "/home/item-sliding"
+        },
+        {
+            "name": "List Reorder",
+            "icon": "list-outline",
+            "route": "/home/list-reorder"
+        },
+        {
+            "name": "Loading",
+            "icon": "ellipsis-horizontal-outline",
+            "route": "/home/loading"
+        },
+        {
+            "name": "Modal",
+            "icon": "move-outline",
+            "route": "/home/modal"
+        },
+        {
+            "name": "Pop Over",
+            "icon": "phone-portrait-outline",
+            "route": "/home/pop-over"
+        },
+        {
+            "name": "Progress Bar and Range",
+            "icon": "code-working-outline",
+            "route": "/home/progress-bar-and-range"
+        },
+        {
+            "name": "Refresher",
+            "icon": "refresh-outline",
+            "route": "/home/refresh"
+        },
+        {
+            "name": "SeachBar",
+            "icon": "search-outline",
+            "route": "/home/search"
+        },
+        {
+            "name": "Segment",
+            "icon": "aperture-outline",
+            "route": "/home/segment"
+        },
+        {
+            "name": "Skeleton Text",
+            "icon": "skull-outline",
+            "route": "/home/skelenton-text"
+        },
+        {
+            "name": "Slides",
+            "icon": "albums-outline",
+            "route": "/home/slides"
+        },
+        {
+            "name": "Tabs",
+            "icon": "logo-tableau",
+            "route": "/home/tabs"
+        },
+        {
+            "name": "Toast",
+            "icon": "notifications-outline",
+            "route": "/home/toast"
+        }
+    ]

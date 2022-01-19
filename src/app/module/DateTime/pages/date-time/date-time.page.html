@@ -1,0 +1,146 @@
+<app-header title="Date Time"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Date Init</ion-label>
+      <ion-button>See All</ion-button>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-datetime [value]="fechaInicio.toISOString()"></ion-datetime>
+    </ion-item>
+
+    <h2>Initial value</h2>
+    <ion-item>
+      <ion-datetime value="2012-12-15T13:47:20.789"></ion-datetime>
+    </ion-item>
+
+    <h2>Readonly</h2>
+    <ion-item>
+      <ion-datetime readonly></ion-datetime>
+    </ion-item>
+
+    <h2>Disabled</h2>
+    <ion-item>
+      <ion-datetime disabled></ion-datetime>
+    </ion-item>
+
+    <h2>Custom locale</h2>
+    <ion-item>
+      <ion-datetime locale="en-GB"></ion-datetime>
+    </ion-item>
+
+    <h2>Max and min</h2>
+    <ion-item>
+      <ion-datetime
+        min="1994-03-14"
+        max="2012-12-09"
+        value="2008-09-02"
+      ></ion-datetime>
+    </ion-item>
+
+    <h2>15 minute increments</h2>
+    <ion-item>
+      <ion-datetime minuteValues="0,15,30,45"></ion-datetime>
+    </ion-item>
+
+    <h2>Specific days/months/years</h2>
+    <ion-item>
+      <ion-datetime
+        monthValues="6,7,8"
+        yearValues="2014,2015"
+        dayValues="01,02,03,04,05,06,08,09,10,11,12,13,14"
+      ></ion-datetime>
+    </ion-item>
+
+    <h2>Selecting time, no date</h2>
+    <ion-item>
+      <ion-datetime presentation="time"></ion-datetime>
+    </ion-item>
+
+    <h2>Selecting time first, date second</h2>
+    <ion-item>
+      <ion-datetime presentation="time-date"></ion-datetime>
+    </ion-item>
+
+    <h2>Full width size</h2>
+    <ion-item>
+      <ion-datetime size="cover"></ion-datetime>
+    </ion-item>
+
+    <h2>Custom Hour Cycle</h2>
+    <ion-item>
+      <ion-datetime hourCycle="h23"></ion-datetime>
+    </ion-item>
+
+    <h2>Custom first day of week</h2>
+    <ion-item>
+      <ion-datetime [firstDayOfWeek]="1"></ion-datetime>
+    </ion-item>
+
+    <h2>Custom title</h2>
+    <ion-item>
+      <ion-datetime>
+        <div slot="title">Dia</div>
+      </ion-datetime>
+    </ion-item>
+
+    <h2>Clear button</h2>
+    <ion-item>
+      <ion-datetime [showClearButton]="true"></ion-datetime>
+    </ion-item>
+
+    <h2>Datetime in overlay</h2>
+    <ion-button id="open-modal">Open Datetime Modal</ion-button>
+    <ion-modal trigger="open-modal">
+      <ng-template>
+        <ion-content>
+          <ion-datetime></ion-datetime>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <h2>Custom buttons</h2>
+    <ion-item>
+      <ion-datetime>
+        <ion-buttons slot="buttons">
+          <ion-button (click)="confirm()">Good to go!</ion-button>
+          <ion-button (click)="reset()">Reset</ion-button>
+        </ion-buttons>
+      </ion-datetime>
+    </ion-item>
+
+    <h2>Datetime in popover with cover element</h2>
+    <ion-item button="true" id="open-date-input">
+      <ion-label>Date</ion-label>
+      <ion-text slot="end">{{ dateValue }}</ion-text>
+      <ion-popover trigger="open-date-input" show-backdrop="false">
+        <ng-template>
+          <ion-datetime
+            #popoverDatetime
+            presentation="date"
+            (ionChange)="dateValue = formatDate(popoverDatetime.value)"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+
+    <h2>Datetime in popover with input</h2>
+    <ion-item>
+      <ion-input [value]="dateValue2"></ion-input>
+      <ion-button fill="clear" id="open-date-input-2">
+        <ion-icon icon="calendar"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="open-date-input-2" show-backdrop="true">
+        <ng-template>
+          <ion-datetime
+            #popoverDatetime2
+            presentation="date"
+            (ionChange)="dateValue2 = formatDate(popoverDatetime2.value)"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -24,3 +24,19 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.red-custom {
+    color: red !important;
+}
+
+ion-item {
+    --background: transparent;
+}
+
+.text-small{
+    font-size: 10px !important;
+}
+
+ion-searchbar {
+    --box-shadow: none !important;
+}

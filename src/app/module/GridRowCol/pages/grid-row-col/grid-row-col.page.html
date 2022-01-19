@@ -1,0 +1,29 @@
+<app-header title="Grid Row Col"></app-header>
+
+<ion-content fullscreen>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+        sizeLg="2"
+        sizeMd="4"
+        sizeSm="6"
+        size="12"
+        *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]"
+      >
+        <ion-card>
+          <ion-img src="/assets/ted.png"></ion-img>
+        </ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+          <ion-card-title>Awesome Title</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto nemo
+          laborum repellendus fugit voluptatum quaerat veniam aspernatur tempore
+          ipsum odio! Aliquid modi voluptas architecto consectetur velit
+          quisquam praesentium suscipit ex?
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

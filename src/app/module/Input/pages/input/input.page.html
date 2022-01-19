@@ -1,0 +1,112 @@
+<app-header [title]="nombre || 'Input Forms'"></app-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Input Normal</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Awesome Input"
+        [(ngModel)]="nombre"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item
+      ><ion-label>Default Input</ion-label> <ion-input></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Input with value</ion-label>
+      <ion-input value="custom"></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Input with placeholder</ion-label>
+      <ion-input placeholder="Enter Input"></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Input with clear button when there is a value</ion-label>
+      <ion-input clearInput value="clear me"></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Number type input</ion-label>
+      <ion-input type="number" value="333"></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Disabled input</ion-label>
+      <ion-input value="Disabled" disabled></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Readonly input</ion-label>
+      <ion-input value="Readonly" readonly></ion-input
+    ></ion-item>
+
+    <ion-item
+      ><ion-label>Inputs with labels</ion-label>
+      <ion-item> <ion-label>Default Label</ion-label></ion-item>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Floating Label</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">Fixed Label</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Stacked Label</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-title>Formulario</ion-title>
+
+  <form #form="ngForm" (ngSubmit)="submit(form)">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Formulario Valido {{ form.valid }}</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input
+          type="email"
+          placeholder="Awesome Input"
+          required
+          name="email"
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+          [(ngModel)]="usuario.email"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input
+          type="password"
+          placeholder="Awesome Input"
+          name="password"
+          required
+          [(ngModel)]="usuario.password"
+        ></ion-input>
+      </ion-item>
+      <ion-button
+        type="submit"
+        [disabled]="form.invalid"
+        expand="block"
+        fill="outline"
+        shape="round"
+      >
+        Login
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>
